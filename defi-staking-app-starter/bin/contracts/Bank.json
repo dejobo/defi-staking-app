@@ -1,0 +1,364 @@
+{
+    "contractName": "Bank",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "contract Tether",
+                    "name": "_tether",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "inputs": [],
+            "name": "name",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "owner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "tether",
+            "outputs": [
+                {
+                    "internalType": "contract Tether",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.12+commit.f00d7308\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Tether\",\"name\":\"_tether\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tether\",\"outputs\":[{\"internalType\":\"contract Tether\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/micsoftware/Projects/blockchain/defi-staking-app-starter/defi-staking-app-starter/contracts/Bank.sol\":\"Bank\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/micsoftware/Projects/blockchain/defi-staking-app-starter/defi-staking-app-starter/contracts/Bank.sol\":{\"keccak256\":\"0x12b0d1ad07321b5311fdeada5b165e30c0d9bc0db66f5c1b1bfd1d9c30a559f3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a3744905c271c46281ee11c067de6edc15b55ae2dc2f37d7c0dca794b495e908\",\"dweb:/ipfs/QmbVDXxJ31bGbPckfUqAJaJVnzVyzg6yiGuhNaVeQoGRps\"]},\"/Users/micsoftware/Projects/blockchain/defi-staking-app-starter/defi-staking-app-starter/contracts/Tether.sol\":{\"keccak256\":\"0xa65998a09073a59c0faf143929926aa8662b963bcf4e7d08714b43e137318a85\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bc3a87f55b2615b12d50621f278c6f7e523c4cdaf437de5a94a9c64d47389ff7\",\"dweb:/ipfs/QmQNWDHeuDocordGRWWWD4hKhbq3QPhvai1a4ad43m8N8U\"]}},\"version\":1}",
+    "bytecode": "60c0604052600e60808190526d42616e6b206f662043727970746f60901b60a090815261002f9160009190610080565b5034801561003c57600080fd5b5060405161038938038061038983398101604081905261005b91610119565b600280546001600160a01b0319166001600160a01b0392909216919091179055610184565b82805461008c90610149565b90600052602060002090601f0160209004810192826100ae57600085556100f4565b82601f106100c757805160ff19168380011785556100f4565b828001600101855582156100f4579182015b828111156100f45782518255916020019190600101906100d9565b50610100929150610104565b5090565b5b808211156101005760008155600101610105565b60006020828403121561012b57600080fd5b81516001600160a01b038116811461014257600080fd5b9392505050565b600181811c9082168061015d57607f821691505b6020821081141561017e57634e487b7160e01b600052602260045260246000fd5b50919050565b6101f6806101936000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806306fdde03146100465780635efc071a146100645780638da5cb5b1461008f575b600080fd5b61004e6100a2565b60405161005b9190610130565b60405180910390f35b600254610077906001600160a01b031681565b6040516001600160a01b03909116815260200161005b565b600154610077906001600160a01b031681565b600080546100af90610185565b80601f01602080910402602001604051908101604052809291908181526020018280546100db90610185565b80156101285780601f106100fd57610100808354040283529160200191610128565b820191906000526020600020905b81548152906001019060200180831161010b57829003601f168201915b505050505081565b600060208083528351808285015260005b8181101561015d57858101830151858201604001528201610141565b8181111561016f576000604083870101525b50601f01601f1916929092016040019392505050565b600181811c9082168061019957607f821691505b602082108114156101ba57634e487b7160e01b600052602260045260246000fd5b5091905056fea2646970667358221220a298e8d2d943affc00a8e989e7036a529cc3c8a3f63ba9e1b92d3399f5bdef7364736f6c634300080c0033",
+    "deployedBytecode": "608060405234801561001057600080fd5b50600436106100415760003560e01c806306fdde03146100465780635efc071a146100645780638da5cb5b1461008f575b600080fd5b61004e6100a2565b60405161005b9190610130565b60405180910390f35b600254610077906001600160a01b031681565b6040516001600160a01b03909116815260200161005b565b600154610077906001600160a01b031681565b600080546100af90610185565b80601f01602080910402602001604051908101604052809291908181526020018280546100db90610185565b80156101285780601f106100fd57610100808354040283529160200191610128565b820191906000526020600020905b81548152906001019060200180831161010b57829003601f168201915b505050505081565b600060208083528351808285015260005b8181101561015d57858101830151858201604001528201610141565b8181111561016f576000604083870101525b50601f01601f1916929092016040019392505050565b600181811c9082168061019957607f821691505b602082108114156101ba57634e487b7160e01b600052602260045260246000fd5b5091905056fea2646970667358221220a298e8d2d943affc00a8e989e7036a529cc3c8a3f63ba9e1b92d3399f5bdef7364736f6c634300080c0033",
+    "sourceMap": "110:37:0:-:0;90:179;110:37;;90:179;110:37;;;-1:-1:-1;;;110:37:0;;;;;;-1:-1:-1;;110:37:0;;:::i;:::-;;206:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;244:6;:16;;-1:-1:-1;;;;;;244:16:0;-1:-1:-1;;;;;244:16:0;;;;;;;;;;90:179;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;90:179:0;;;-1:-1:-1;90:179:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;14:304:2;98:6;151:2;139:9;130:7;126:23;122:32;119:52;;;167:1;164;157:12;119:52;193:16;;-1:-1:-1;;;;;238:31:2;;228:42;;218:70;;284:1;281;274:12;218:70;307:5;14:304;-1:-1:-1;;;14:304:2:o;323:380::-;402:1;398:12;;;;445;;;466:61;;520:4;512:6;508:17;498:27;;466:61;573:2;565:6;562:14;542:18;539:38;536:161;;;619:10;614:3;610:20;607:1;600:31;654:4;651:1;644:15;682:4;679:1;672:15;536:161;;323:380;;;:::o;:::-;90:179:0;;;;;;",
+    "deployedSourceMap": "90:179:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;110:37;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;179:20;;;;;-1:-1:-1;;;;;179:20:0;;;;;;-1:-1:-1;;;;;794:32:2;;;776:51;;764:2;749:18;179:20:0;616:217:2;153:20:0;;;;;-1:-1:-1;;;;;153:20:0;;;110:37;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;14:597:2:-;126:4;155:2;184;173:9;166:21;216:6;210:13;259:6;254:2;243:9;239:18;232:34;284:1;294:140;308:6;305:1;302:13;294:140;;;403:14;;;399:23;;393:30;369:17;;;388:2;365:26;358:66;323:10;;294:140;;;452:6;449:1;446:13;443:91;;;522:1;517:2;508:6;497:9;493:22;489:31;482:42;443:91;-1:-1:-1;595:2:2;574:15;-1:-1:-1;;570:29:2;555:45;;;;602:2;551:54;;14:597;-1:-1:-1;;;14:597:2:o;1046:380::-;1125:1;1121:12;;;;1168;;;1189:61;;1243:4;1235:6;1231:17;1221:27;;1189:61;1296:2;1288:6;1285:14;1265:18;1262:38;1259:161;;;1342:10;1337:3;1333:20;1330:1;1323:31;1377:4;1374:1;1367:15;1405:4;1402:1;1395:15;1259:161;;1046:380;;;:::o",
+    "sourcePath": "/Users/micsoftware/Projects/blockchain/defi-staking-app-starter/defi-staking-app-starter/contracts/Bank.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.12+commit.f00d7308"
+    },
+    "ast": {
+        "absolutePath": "/Users/micsoftware/Projects/blockchain/defi-staking-app-starter/defi-staking-app-starter/contracts/Bank.sol",
+        "exportedSymbols": {
+            "Bank": [
+                22
+            ],
+            "Tether": [
+                146
+            ]
+        },
+        "id": 23,
+        "license": "MIT",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    ">=",
+                    "0.4",
+                    ".22",
+                    "<",
+                    "0.9",
+                    ".0"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "32:32:0"
+            },
+            {
+                "absolutePath": "/Users/micsoftware/Projects/blockchain/defi-staking-app-starter/defi-staking-app-starter/contracts/Tether.sol",
+                "file": "./Tether.sol",
+                "id": 2,
+                "nameLocation": "-1:-1:-1",
+                "nodeType": "ImportDirective",
+                "scope": 23,
+                "sourceUnit": 147,
+                "src": "66:22:0",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "Bank",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 22,
+                "linearizedBaseContracts": [
+                    22
+                ],
+                "name": "Bank",
+                "nameLocation": "99:4:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "functionSelector": "06fdde03",
+                        "id": 5,
+                        "mutability": "mutable",
+                        "name": "name",
+                        "nameLocation": "124:4:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 22,
+                        "src": "110:37:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_string_storage",
+                            "typeString": "string"
+                        },
+                        "typeName": {
+                            "id": 3,
+                            "name": "string",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "110:6:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_string_storage_ptr",
+                                "typeString": "string"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "42616e6b206f662043727970746f",
+                            "id": 4,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "131:16:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_6c1128aada6d72742001affd72b337f31c5f916aaee7485f1d11f15218933b7f",
+                                "typeString": "literal_string \"Bank of Crypto\""
+                            },
+                            "value": "Bank of Crypto"
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "8da5cb5b",
+                        "id": 7,
+                        "mutability": "mutable",
+                        "name": "owner",
+                        "nameLocation": "168:5:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 22,
+                        "src": "153:20:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                        },
+                        "typeName": {
+                            "id": 6,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "153:7:0",
+                            "stateMutability": "nonpayable",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "5efc071a",
+                        "id": 10,
+                        "mutability": "mutable",
+                        "name": "tether",
+                        "nameLocation": "193:6:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 22,
+                        "src": "179:20:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Tether_$146",
+                            "typeString": "contract Tether"
+                        },
+                        "typeName": {
+                            "id": 9,
+                            "nodeType": "UserDefinedTypeName",
+                            "pathNode": {
+                                "id": 8,
+                                "name": "Tether",
+                                "nodeType": "IdentifierPath",
+                                "referencedDeclaration": 146,
+                                "src": "179:6:0"
+                            },
+                            "referencedDeclaration": 146,
+                            "src": "179:6:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Tether_$146",
+                                "typeString": "contract Tether"
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 20,
+                            "nodeType": "Block",
+                            "src": "234:33:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 18,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "id": 16,
+                                            "name": "tether",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 10,
+                                            "src": "244:6:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_contract$_Tether_$146",
+                                                "typeString": "contract Tether"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "id": 17,
+                                            "name": "_tether",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 13,
+                                            "src": "253:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_contract$_Tether_$146",
+                                                "typeString": "contract Tether"
+                                            }
+                                        },
+                                        "src": "244:16:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_contract$_Tether_$146",
+                                            "typeString": "contract Tether"
+                                        }
+                                    },
+                                    "id": 19,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "244:16:0"
+                                }
+                            ]
+                        },
+                        "id": 21,
+                        "implemented": true,
+                        "kind": "constructor",
+                        "modifiers": [],
+                        "name": "",
+                        "nameLocation": "-1:-1:-1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 14,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 13,
+                                    "mutability": "mutable",
+                                    "name": "_tether",
+                                    "nameLocation": "225:7:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 21,
+                                    "src": "218:14:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_contract$_Tether_$146",
+                                        "typeString": "contract Tether"
+                                    },
+                                    "typeName": {
+                                        "id": 12,
+                                        "nodeType": "UserDefinedTypeName",
+                                        "pathNode": {
+                                            "id": 11,
+                                            "name": "Tether",
+                                            "nodeType": "IdentifierPath",
+                                            "referencedDeclaration": 146,
+                                            "src": "218:6:0"
+                                        },
+                                        "referencedDeclaration": 146,
+                                        "src": "218:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_contract$_Tether_$146",
+                                            "typeString": "contract Tether"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "217:16:0"
+                        },
+                        "returnParameters": {
+                            "id": 15,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "234:0:0"
+                        },
+                        "scope": 22,
+                        "src": "206:61:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 23,
+                "src": "90:179:0",
+                "usedErrors": []
+            }
+        ],
+        "src": "32:238:0"
+    },
+    "functionHashes": {
+        "name()": "06fdde03",
+        "owner()": "8da5cb5b",
+        "tether()": "5efc071a"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "100400",
+            "executionCost": "infinite",
+            "totalCost": "infinite"
+        },
+        "external": {
+            "name()": "infinite",
+            "owner()": "2359",
+            "tether()": "2337"
+        }
+    }
+}
