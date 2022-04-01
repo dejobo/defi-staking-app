@@ -44,13 +44,13 @@ contract Bank {
 
     // Issue rewards/tokens to customer
     function issueToken() public {
-        require(msg.sender == owner, "caller must be the  owner");
+        require(msg.sender == owner, "caller must be the owner");
         for (uint256 index = 0; index < stakers.length; index++) {
             address staker = stakers[index];
             uint256 balance = stakingBalance[staker];
             uint256 rewardAmount = balance / STAKE_PERCENTAGE;
             // transfer reward to staker/customer
-            if (balance > 0) {
+            if (rewardAmount > 0) {
                 javuToken.transfer(staker, rewardAmount);
             }
         }
@@ -60,7 +60,7 @@ contract Bank {
     function unstakeToken() public {
         // get customer staking balance
         uint256 balance = stakingBalance[msg.sender];
-        require(balance > 0, "No token available to unstake");
+        require(balance > 0, "No tether token available to unstake");
         //transfer tether token to customer from smart contract
         tether.transfer(msg.sender, balance);
 
@@ -69,5 +69,10 @@ contract Bank {
 
         //update staking status.
         isStaking[msg.sender] = false;
+    }
+
+    // get customer's staking balance
+    function customerBalance(address wallet) public view returns (uint256) {
+        return stakingBalance[wallet];
     }
 }

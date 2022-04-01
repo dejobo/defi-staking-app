@@ -25,7 +25,10 @@ contract Tether {
 
     function transfer(address to, uint256 value) public returns (bool success) {
         // validate account balance
-        require(balanceOf[msg.sender] > value);
+        require(
+            balanceOf[msg.sender] >= value,
+            "Balance must be greater than value"
+        );
 
         // subtract value from balance
         balanceOf[msg.sender] -= value;

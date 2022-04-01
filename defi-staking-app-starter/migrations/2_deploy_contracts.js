@@ -13,8 +13,8 @@ module.exports = async function (deployer, network, accounts) {
     const bank = await Bank.deployed();
 
     // transfer init coins
-    await tether.transfer(bank.address, '1000000000000000000');
+    await tether.transfer(accounts[1], '100000000000000000000');
 
-    await javuToken.transfer(bank.address, '100000000000000000000000')
+    await javuToken.transfer(bank.address, '1000000000000000000000000')
     //await javuToken.transferFrom(bank.address, accounts[1], '1000000')
 }

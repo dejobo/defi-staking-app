@@ -85,7 +85,15 @@ contract("Bank", accounts => {
             await tether.approve(bank.address, token('100'), { from: customer });
             await bank.depositToken(token('100'), { from: customer });
 
-            // check update customer balance
+            //check customer/investor balance after staking
+            result = await tether.balanceOf(customer);
+            assert.equal(result.toString(), token('0'), 'customer balance after staking');
+
+            // check bank tether balance after staking
+            const bankBalance = await tether.balanceOf(bank.address);
+            assert.equal(bankBalance, token('100'), 'bank balance after customer staked');
+
+            // check update customer javu balance
             const balance = await javu.balanceOf(customer);
             assert.equal(balance, token('0'), 'customer mock javu token balance');
 
@@ -100,54 +108,18 @@ contract("Bank", accounts => {
             let newBal = await javu.balanceOf(customer);
             assert.equal(newBal.toString(), token('10'));
 
+            // check customer balance in bank
+            const customerBalance = await bank.customerBalance(customer);
+            assert.equal(customerBalance, token('100'), 'customer balance in bank');
+
             // unstake customer balance
             await bank.unstakeToken({ from: customer });
 
             //check customer/investor balance
             result = await tether.balanceOf(customer);
-            assert.equal(result.toString(), token('0'), 'customer balance after unstaking');
+            assert.equal(result.toString(), token('100'), 'customer balance after unstaking');
 
         });
-
-        // it("Bank can issue token to customer", async () => {
-        //     // give 100 mock tether to customer
-        //     await tether.transfer(customer2, token('100'));
-        //     let bal = await tether.getBalance(customer2);
-        //     assert.equal(bal.toString(), token('100'));
-
-        //     // get current balance of customer
-        //     let balance = await javu.balanceOf(customer2);
-        //     assert.equal(balance.toString(), token('0'));
-
-        //     // stake tether token
-        //     await tether.approve(bank.address, token('100'), { from: customer2 });
-        //     await bank.depositToken(token('100'), { from: customer2 });
-
-        //     // issue token to customers
-        //     await bank.issueToken();
-
-        //     // get new balance of customer
-        //     let newBal = await javu.balanceOf(customer2);
-        //     assert.equal(newBal.toString(), token('10'));
-        // });
-
-        // it("unstake customer balance", async () => {
-        //     // give 100 mock tether to customer
-        //     await tether.transfer(customer, token('100'));
-        //     let bal = await tether.getBalance(customer);
-        //     assert.equal(bal.toString(), token('100'));
-
-        //     // stake tether token
-        //     await tether.approve(bank.address, token('100'), { from: customer });
-        //     await bank.depositToken(token('100'), { from: customer });
-
-        //     // unstake customer balance
-        //     await bank.unstakeToken({ from: customer });
-
-        //     // get new balance of customer
-        //     let newBal = await javu.balanceOf(customer);
-        //     assert.equal(newBal.toString(), token('10'));
-        // });
 
     });
 })
